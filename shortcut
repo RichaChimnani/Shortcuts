@@ -2,8 +2,8 @@ import snowflake.connector
 
 # Connectio string
 conn = snowflake.connector.connect(
-                user='CDWBISFPRD@optum.com',
-                password='6dGjlJm8x7OrRQrqvxhuq6Cd7',
+                user='',
+                password='',
                 account='uhgdwaas.east-us-2.azure',
                 #warehouse='COMPUTE_WH',
                 database='CDW_PRD_CALL_DB',
@@ -49,7 +49,7 @@ for row in cursor:
 	
 	cursor = conn.cursor()
 	
-	query = "SELECT * FROM [THOR].[GENESYS].[V_CHAT_CCS_GIM_TRANSCRIPTS_ERA] where ROW_DATE between '2021-01-01' and '2021-01-05'"
+	query = "SELECT * FROM [THOR].[GENESYS].[V_CHAT_CCS_GIM_TRANSCRIPTS_ERA] where ROW_DATE between '2023-01-01' and '2023-01-05'"
 	
 	df = pd.read_sql_query(query,conn)
 	print(df)
