@@ -27,7 +27,7 @@ for row in cursor:
     
 	1. Connecting MySQL Server
 	from sqlalchemy import create_engine
-	import pymysql
+	import pymysql  
 	
 	db_connection_str = 'mysql+pymysql://eem327_own:p5BJyIW@dbvrd46413/eem327'
 	db_connection = create_engine(db_connection_str)
